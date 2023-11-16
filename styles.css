@@ -55,6 +55,11 @@ main {
   gap: 5px;
 }
 .board-block {
+  font-weight: bold;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 50px;
   width: 50px;
   border: 2px solid gray;
