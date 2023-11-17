@@ -1,5 +1,3 @@
-const answer = "APPLE";
-
 let attemts = 0;
 let index = 0;
 
@@ -20,8 +18,11 @@ function appStart() {
     window.removeEventListener("keydown", handleKeydown);
     displayGameover();
   };
-  const handleEnterKey = () => {
+  const handleEnterKey = async () => {
     let 맞은_갯수 = 0;
+    const respon = await fetch("/answer");
+    const answer = await respon.json();
+
     for (let i = 0; i < 5; i++) {
       const block = document.querySelector(
         `.board-block[data-index='${attemts}${i}']`
